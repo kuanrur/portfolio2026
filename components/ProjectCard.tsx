@@ -11,7 +11,7 @@ interface ProjectCardProps {
   imageSrc: string;
   href?: string;
   isComingSoon?: boolean;
-  gradient: string;
+  gradient?: string;
 }
 
 export default function ProjectCard({
@@ -33,11 +33,11 @@ export default function ProjectCard({
       className="group"
     >
       <div className="flex flex-col lg:flex-row items-stretch gap-10 md:gap-20">
-        {/* Image */}
+        {/* Image with Gradient Background */}
         <div 
-          className={`flex-1 rounded-3xl ${gradient} border border-gray-200 shadow-sm p-10 flex items-center justify-center overflow-hidden`}
+          className={`flex-1 rounded-3xl ${gradient || 'bg-gray-50'} min-h-[320px] md:min-h-[400px] p-8 md:p-12 flex items-center justify-center`}
         >
-          <div className="relative w-full h-64 md:h-80">
+          <div className="relative w-full h-full max-h-[280px] md:max-h-[350px]">
             <Image
               src={imageSrc}
               alt={title}

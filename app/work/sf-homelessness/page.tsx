@@ -7,7 +7,7 @@ export default function SFHomelessness() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 md:py-32 px-6 md:px-12 lg:px-28">
+      <section className="py-8 md:py-12 px-6 md:px-12 lg:px-28">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -341,13 +341,13 @@ function SolutionCard({ image, title, impact, why, reverse }: SolutionCardProps)
         />
       </div>
       <div className="flex-1 space-y-8">
-        <h3 className="text-xl md:text-2xl font-semibold">{title}</h3>
+        <h3 className="text-xl md:text-2xl font-semibold text-center">{title}</h3>
         <div className="space-y-4">
-          <div>
+          <div className="text-center">
             <h4 className="text-sm font-black tracking-wider uppercase mb-2">Impact</h4>
             <p className="text-base">{impact}</p>
           </div>
-          <div>
+          <div className="text-center">
             <h4 className="text-sm font-black tracking-wider uppercase mb-2">Why this matters</h4>
             <p className="text-base">{why}</p>
           </div>

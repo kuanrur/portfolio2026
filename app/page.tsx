@@ -82,10 +82,9 @@ export default function Home() {
             <ProjectCard
               title="Designing trust and decision-making in cross-cultural product teams"
               description="Designing a collaboration rhythm layer for Slack to reduce expectation mismatch in distributed teams."
-              imageSrc="/images/home/project-remote-collab.svg"
+              imageSrc="/images/home/project-remote-collab.png"
               href="/work/remote-collaboration"
-              isComingSoon={true}
-              gradient="bg-gradient-to-b from-white to-[#C9D0DB]"
+              gradient="bg-gradient-to-b from-[#C9D0DB] to-[#B8C2D1]"
             />
 
             {/* Project 2: GitRoll */}
@@ -93,9 +92,9 @@ export default function Home() {
               title="AI-Powered Recruiting and Conversational Portfolio Experience"
               subtitle="GitRoll"
               description="Designing the systems behind an agentic AI recruiter and the conversational digital portfolio."
-              imageSrc="/images/home/project-gitroll.svg"
+              imageSrc="/images/home/project-gitroll.png"
               href="/work/gitroll"
-              gradient="bg-gradient-to-b from-[#FF7518] to-[#C9D0DB]"
+              gradient="bg-gradient-to-br from-[#D4A894] to-[#B89278]"
             />
 
             {/* Project 3: SF Homeless */}
@@ -103,9 +102,9 @@ export default function Home() {
               title="Understanding Homelessness Through Data and Human Stories"
               subtitle="SF homeless issue"
               description="Exploring the intersection of data, policy, and lived experience to understand homelessness in San Francisco."
-              imageSrc="/images/home/project-sf-homeless.svg"
+              imageSrc="/images/home/project-sf-homeless.png"
               href="/work/sf-homelessness"
-              gradient="bg-gradient-to-b from-[#C9D0DB] to-[#52658C]"
+              gradient="bg-gradient-to-b from-[#6B7F99] to-[#52658C]"
             />
           </div>
         </div>
