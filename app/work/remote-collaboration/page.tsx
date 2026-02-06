@@ -2,12 +2,13 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { HeroHeading, SectionHeading, SubsectionHeading, CardHeading, LabelText, BodyLarge, QuoteText } from '@/components/Typography';
 
 export default function RemoteCollaboration() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-8 md:py-12 px-6 md:px-12 lg:px-28">
+      <section className="py-8 md:py-12 px-8 md:px-16 lg:px-40">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -16,12 +17,12 @@ export default function RemoteCollaboration() {
             className="flex flex-col items-center gap-8 md:gap-16"
           >
             <div className="flex flex-col items-center gap-4 text-center max-w-4xl">
-              <h1 className="text-3xl md:text-5xl font-medium leading-tight">
+              <HeroHeading>
                 Designing trust and decision making in cross cultural product teams
-              </h1>
-              <p className="text-base md:text-lg text-center">
+              </HeroHeading>
+              <BodyLarge className="text-center">
                 Designing a collaboration rhythm layer for Slack to reduce expectation mismatch in distributed teams.
-              </p>
+              </BodyLarge>
             </div>
 
             {/* Hero Image */}
@@ -47,10 +48,10 @@ export default function RemoteCollaboration() {
       </section>
 
       {/* Divider */}
-      <div className="border-t border-black/20 mx-6 md:mx-12 lg:mx-28" />
+      <div className="border-t border-black/20 mx-8 md:mx-16 lg:mx-40" />
 
       {/* Why This Problem Matters */}
-      <section className="py-20 md:py-32 px-6 md:px-12 lg:px-28">
+      <section className="py-20 md:py-32 px-8 md:px-16 lg:px-40">
         <div className="max-w-6xl mx-auto">
           <SectionTitle title="Why This Problem Matters" />
           
@@ -69,7 +70,7 @@ export default function RemoteCollaboration() {
           <div className="mt-20 md:mt-32">
             <div className="flex flex-col items-center gap-8">
               <div className="text-center max-w-2xl">
-                <h3 className="text-sm md:text-base font-black tracking-wider uppercase mb-4">The tool gap</h3>
+                <LabelText className="mb-4">The tool gap</LabelText>
                 <p className="text-sm md:text-base">
                   Today's tools optimize for workflow, not for collaboration psychology.
                 </p>
@@ -177,31 +178,32 @@ export default function RemoteCollaboration() {
                 </div>
               </div>
 
-              <p className="text-base md:text-lg text-center italic mt-8">
+              <BodyLarge className="text-center italic mt-8">
                 | They help teams work, but not necessarily work together.
-              </p>
+              </BodyLarge>
             </div>
           </div>
         </div>
       </section>
 
       {/* HMW Statement */}
-      <section className="py-20 md:py-32 px-6 md:px-12 lg:px-28 bg-gradient-to-b from-transparent via-[#C9D0DB] to-transparent my-20">
+      <section className="py-20 md:py-32 px-8 md:px-16 lg:px-40 bg-gradient-to-b from-transparent via-[#C9D0DB] to-transparent my-20">
         <div className="max-w-5xl mx-auto text-center">
-          <motion.h2
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-xl md:text-2xl font-semibold leading-tight"
           >
-            What exactly breaks in cross-cultural collaboration?
-          </motion.h2>
+            <QuoteText>
+              What exactly breaks in cross-cultural collaboration?
+            </QuoteText>
+          </motion.div>
         </div>
       </section>
 
       {/* Research & Methods */}
-      <section className="py-20 md:py-32 px-6 md:px-12 lg:px-28">
+      <section className="py-20 md:py-32 px-8 md:px-16 lg:px-40">
         <div className="max-w-6xl mx-auto">
           <SectionTitle title="Research & Methods" />
 
@@ -254,18 +256,18 @@ export default function RemoteCollaboration() {
       </section>
 
       {/* Problem Concreting */}
-      <section className="py-20 md:py-32 px-6 md:px-12 lg:px-28">
+      <section className="py-20 md:py-32 px-8 md:px-16 lg:px-40">
         <div className="max-w-6xl mx-auto">
           <SectionTitle title="Problem Concreting" />
-          <p className="text-base md:text-lg mt-4 text-center mb-12 md:mb-16">
+          <BodyLarge className="mt-4 text-center mb-12 md:mb-16">
             Across different teams and contexts, the same breakdowns kept appearing.
-          </p>
+          </BodyLarge>
 
           {/* Scenario Container */}
           <div className="flex flex-col items-end">
             {/* Scenario Label */}
             <div className="text-center mb-6 w-full">
-              <h3 className="text-sm md:text-base font-black tracking-wider uppercase">Scenario</h3>
+              <LabelText>Scenario</LabelText>
             </div>
 
             {/* Storyboard with Note Side by Side */}
@@ -297,13 +299,13 @@ export default function RemoteCollaboration() {
       </section>
 
       {/* Key Insights */}
-      <section className="py-20 md:py-32 px-6 md:px-12 lg:px-28">
+      <section className="py-20 md:py-32 px-8 md:px-16 lg:px-40">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Key Insights</h2>
-            <p className="text-base md:text-lg">
+            <HeroHeading className="font-bold mb-4">Key Insights</HeroHeading>
+            <BodyLarge>
               Looking across these scenarios, several deeper patterns emerged.
-            </p>
+            </BodyLarge>
           </div>
 
           <div className="space-y-12 md:space-y-16">
@@ -324,36 +326,38 @@ export default function RemoteCollaboration() {
       </section>
 
       {/* HMW Statement 2 */}
-      <section className="py-20 md:py-32 px-6 md:px-12 lg:px-28 bg-gradient-to-b from-transparent via-[#C9D0DB] to-transparent my-20">
+      <section className="py-20 md:py-32 px-8 md:px-16 lg:px-40 bg-gradient-to-b from-transparent via-[#C9D0DB] to-transparent my-20">
         <div className="max-w-5xl mx-auto text-center">
-          <motion.h2
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-xl md:text-2xl font-semibold leading-tight"
           >
-            How might we make response expectations and collaboration rhythms visible and 
-            negotiable in cross-cultural remote teams?
-          </motion.h2>
+            <QuoteText>
+              How might we make response expectations and collaboration rhythms visible and 
+              negotiable in cross-cultural remote teams?
+            </QuoteText>
+          </motion.div>
         </div>
       </section>
 
       {/* Coming Soon */}
-      <section className="py-20 md:py-32 px-6 md:px-12 lg:px-28">
+      <section className="py-20 md:py-32 px-8 md:px-16 lg:px-40">
         <div className="max-w-6xl mx-auto text-center">
-          <motion.h2
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-5xl font-semibold"
           >
-            Coming soon
-          </motion.h2>
-          <p className="mt-8 text-lg text-black/60">
+            <HeroHeading className="font-semibold">
+              Coming soon
+            </HeroHeading>
+          </motion.div>
+          <BodyLarge className="mt-8 text-black/60">
             This project is currently in progress. Check back soon for the full case study!
-          </p>
+          </BodyLarge>
         </div>
       </section>
     </div>
@@ -362,22 +366,22 @@ export default function RemoteCollaboration() {
 
 function SectionTitle({ title }: { title: string }) {
   return (
-    <motion.h2
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="text-3xl md:text-4xl font-bold text-center"
+      className="text-center"
     >
-      {title}
-    </motion.h2>
+      <SectionHeading>{title}</SectionHeading>
+    </motion.div>
   );
 }
 
 function MetaBlock({ title, content }: { title: string; content: string }) {
   return (
     <div className="flex flex-col gap-3">
-      <h3 className="text-sm md:text-base font-black tracking-wider uppercase">{title}</h3>
+      <LabelText>{title}</LabelText>
       <p className="text-sm md:text-base">{content}</p>
     </div>
   );
@@ -392,7 +396,7 @@ function ContentBlock({ title, content }: { title: string; content: string }) {
       transition={{ duration: 0.6 }}
       className="flex flex-col items-center gap-4 text-center"
     >
-      <h3 className="text-sm md:text-base font-black tracking-wider uppercase">{title}</h3>
+      <LabelText>{title}</LabelText>
       <p className="text-sm md:text-base">{content}</p>
     </motion.div>
   );
@@ -418,7 +422,7 @@ function ResearchCard({ image, title, description }: { image: string; title: str
         </div>
       </div>
       <div className="space-y-3 text-center">
-        <h3 className="text-lg md:text-xl font-semibold">{title}</h3>
+        <CardHeading>{title}</CardHeading>
         <p className="text-base">{description}</p>
       </div>
     </motion.div>
@@ -434,8 +438,8 @@ function InsightBlock({ title, content }: { title: string; content: string }) {
       transition={{ duration: 0.6 }}
       className="space-y-4"
     >
-      <h3 className="text-xl md:text-2xl font-semibold">{title}</h3>
-      <p className="text-base md:text-lg">{content}</p>
+      <SubsectionHeading>{title}</SubsectionHeading>
+      <BodyLarge>{content}</BodyLarge>
     </motion.div>
   );
 }

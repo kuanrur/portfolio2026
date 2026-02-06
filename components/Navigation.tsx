@@ -32,7 +32,7 @@ export default function Navigation() {
         isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm' : 'bg-white'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+      <div className="px-8 md:px-16 lg:px-40">
         <div className="flex justify-between items-center py-6">
           {/* Logo */}
           <Link href="/" className="font-bold text-xl hover:opacity-70 transition-opacity">
@@ -89,7 +89,7 @@ export default function Navigation() {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden overflow-hidden bg-white border-t border-gray-200"
           >
-            <div className="px-6 py-6 flex flex-col gap-6">
+            <div className="px-8 md:px-16 lg:px-40 py-6 flex flex-col gap-6">
               <Link 
                 href="/about" 
                 className={`font-bold text-lg ${

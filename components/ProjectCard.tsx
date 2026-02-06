@@ -48,23 +48,22 @@ export default function ProjectCard({
         </div>
 
         {/* Content */}
-        <div className="flex-1 flex flex-col justify-between gap-6 md:gap-12">
-          <div className="flex flex-col gap-5">
-            <h3 className="text-2xl md:text-4xl font-medium leading-tight">
+        <div className="flex-1 flex flex-col justify-center">
+          <div className="flex flex-col">
+            <h3 className="text-xl md:text-3xl font-medium leading-[1.15] mb-4">
               {title}
             </h3>
             {subtitle && (
-              <p className="text-lg md:text-xl font-medium">
+              <p className="text-lg md:text-xl font-medium mb-4">
                 {subtitle}
               </p>
             )}
-            <p className="text-base leading-relaxed text-black/80">
+            <p className="text-sm md:text-base leading-normal text-black/70 mb-8">
               {description}
             </p>
-          </div>
-          
-          <div className={`text-base ${!isComingSoon && 'group-hover:underline'} transition-all`}>
-            {isComingSoon ? 'Coming soon⟶' : 'view project⟶'}
+            <div className={`text-sm text-black/60 ${!isComingSoon && 'group-hover:underline group-hover:text-black/80'} transition-all`}>
+              {isComingSoon ? 'Coming soon⟶' : 'view project⟶'}
+            </div>
           </div>
         </div>
       </div>

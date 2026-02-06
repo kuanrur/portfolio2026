@@ -2,12 +2,13 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { HeroHeading, SectionHeading, LabelText, BodyLarge } from '@/components/Typography';
 
 export default function GitRoll() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-8 md:py-12 px-6 md:px-12 lg:px-28">
+      <section className="py-8 md:py-12 px-8 md:px-16 lg:px-40">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -16,12 +17,12 @@ export default function GitRoll() {
             className="flex flex-col items-center gap-8 md:gap-16"
           >
             <div className="flex flex-col items-center gap-4 text-center max-w-4xl">
-              <h1 className="text-3xl md:text-5xl font-medium leading-tight">
+              <HeroHeading>
                 AI-Powered Recruiting and Conversational Portfolio Experience
-              </h1>
-              <p className="text-base md:text-lg text-center">
+              </HeroHeading>
+              <BodyLarge className="text-center">
                 GitRoll | Design the systems behind an agentic AI recruiter and the conversational digital portfolio.
-              </p>
+              </BodyLarge>
             </div>
 
             {/* Hero Image */}
@@ -47,10 +48,10 @@ export default function GitRoll() {
       </section>
 
       {/* Divider */}
-      <div className="border-t border-black/20 mx-6 md:mx-12 lg:mx-28" />
+      <div className="border-t border-black/20 mx-8 md:mx-16 lg:mx-40" />
 
       {/* TL;DR Section */}
-      <section className="py-20 md:py-32 px-6 md:px-12 lg:px-28">
+      <section className="py-20 md:py-32 px-8 md:px-16 lg:px-40">
         <div className="max-w-6xl mx-auto">
           <SectionTitle title="TL;DR" />
           
@@ -67,7 +68,7 @@ export default function GitRoll() {
       </section>
 
       {/* Problem Space */}
-      <section className="py-20 md:py-32 px-6 md:px-12 lg:px-28">
+      <section className="py-20 md:py-32 px-8 md:px-16 lg:px-40">
         <div className="max-w-6xl mx-auto">
           <SectionTitle title="Problem space" />
           
@@ -102,7 +103,7 @@ export default function GitRoll() {
       </section>
 
       {/* Information Architecture */}
-      <section className="py-20 md:py-32 px-6 md:px-12 lg:px-28 bg-gray-50">
+      <section className="py-20 md:py-32 px-8 md:px-16 lg:px-40 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <SectionTitle title="Information architecture" />
           
@@ -151,20 +152,20 @@ export default function GitRoll() {
       </section>
 
       {/* Reflection */}
-      <section className="py-20 md:py-32 px-6 md:px-12 lg:px-28 bg-[#E4E4E7] rounded-[32px] mx-6 md:mx-12 lg:mx-28 my-20">
+      <section className="py-20 md:py-32 px-8 md:px-16 lg:px-40 bg-[#E4E4E7] rounded-[32px] mx-8 md:mx-16 lg:mx-40 my-20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-4xl font-semibold mb-12 md:mb-16">Reflection</h2>
+          <SectionHeading className="font-semibold mb-12 md:mb-16">Reflection</SectionHeading>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
             <div className="space-y-4">
-              <h3 className="text-base font-black tracking-wider uppercase">efficiency &gt; novelty</h3>
+              <LabelText>efficiency &gt; novelty</LabelText>
               <p className="text-base leading-relaxed">
                 While working on GitRoll, I had to constantly ask myself: is this feature making the AI smarter, or is it actually saving people time? I learned that in recruiting and professional evaluation, intelligence alone isn't the bottleneck. The real friction is time spent searching, managing connections, and mentally stitching information together. This insight pushed me to prioritize system-level efficiency over feature richness, fewer steps, fewer tools, and faster access to meaningful signals.
               </p>
             </div>
             
             <div className="space-y-4">
-              <h3 className="text-base font-black tracking-wider uppercase">Designing AI With Restraint</h3>
+              <LabelText>Designing AI With Restraint</LabelText>
               <p className="text-base leading-relaxed">
                 One of the hardest parts of this project was deciding what the AI should not do. It was tempting to automate decisions, generate scores, or make strong recommendations. But I learned that in high-stakes contexts like hiring, over-automation can reduce trust rather than increase it. Designing GitRoll meant intentionally keeping humans in the loop and using AI to support interpretation, not replace judgment.
               </p>
@@ -178,22 +179,21 @@ export default function GitRoll() {
 
 function SectionTitle({ title }: { title: string }) {
   return (
-    <motion.h2
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="text-3xl md:text-4xl font-bold"
     >
-      {title}
-    </motion.h2>
+      <SectionHeading>{title}</SectionHeading>
+    </motion.div>
   );
 }
 
 function MetaBlock({ title, content }: { title: string; content: string }) {
   return (
     <div className="flex flex-col gap-3">
-      <h3 className="text-sm md:text-base font-black tracking-wider uppercase">{title}</h3>
+      <LabelText>{title}</LabelText>
       <p className="text-sm md:text-base">{content}</p>
     </div>
   );
@@ -208,7 +208,7 @@ function ContentBlock({ title, content }: { title: string; content: string }) {
       transition={{ duration: 0.6 }}
       className="flex flex-col items-center gap-4"
     >
-      <h3 className="text-sm md:text-base font-black tracking-wider uppercase">{title}</h3>
+      <LabelText>{title}</LabelText>
       <p className="text-sm md:text-base whitespace-pre-line">{content}</p>
     </motion.div>
   );

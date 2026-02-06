@@ -2,12 +2,13 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { HeroHeading, SectionHeading, SubsectionHeading, CardHeading, LabelText, BodyLarge, QuoteText } from '@/components/Typography';
 
 export default function SFHomelessness() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-8 md:py-12 px-6 md:px-12 lg:px-28">
+      <section className="py-8 md:py-12 px-8 md:px-16 lg:px-40">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -16,12 +17,12 @@ export default function SFHomelessness() {
             className="flex flex-col items-center gap-8 md:gap-16"
           >
             <div className="flex flex-col items-center gap-4 text-center max-w-4xl">
-              <h1 className="text-3xl md:text-5xl font-medium leading-tight">
+              <HeroHeading>
                 Understanding SF Homelessness Through Data and Human Stories
-              </h1>
-              <p className="text-base md:text-lg text-center">
+              </HeroHeading>
+              <BodyLarge className="text-center">
                 A research project driven by curiosity and carried out with passion
-              </p>
+              </BodyLarge>
             </div>
 
             {/* Hero Image */}
@@ -48,10 +49,10 @@ export default function SFHomelessness() {
       </section>
 
       {/* Divider */}
-      <div className="border-t border-black/20 mx-6 md:mx-12 lg:mx-28" />
+      <div className="border-t border-black/20 mx-8 md:mx-16 lg:mx-40" />
 
       {/* Walking in SF */}
-      <section className="py-20 md:py-32 px-6 md:px-12 lg:px-28">
+      <section className="py-20 md:py-32 px-8 md:px-16 lg:px-40">
         <div className="max-w-6xl mx-auto">
           <SectionTitle title="Walking in San Francisco" />
           
@@ -72,14 +73,14 @@ export default function SFHomelessness() {
       </section>
 
       {/* Why This Problem Matters */}
-      <section className="py-20 md:py-32 px-6 md:px-12 lg:px-28">
+      <section className="py-20 md:py-32 px-8 md:px-16 lg:px-40">
         <div className="max-w-6xl mx-auto">
           <SectionTitle title="Why This Problem Matters" />
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 mt-12 md:mt-16">
             <div className="flex flex-col items-center gap-4">
-              <h3 className="text-sm md:text-base font-black tracking-wider uppercase text-center">What is happening</h3>
-              <h4 className="text-2xl md:text-3xl font-medium text-center">Timing matters more than income.</h4>
+              <LabelText className="text-center">What is happening</LabelText>
+              <SubsectionHeading className="font-medium text-center">Timing matters more than income.</SubsectionHeading>
             </div>
 
             <div className="flex flex-col lg:flex-row items-center gap-8">
@@ -98,20 +99,20 @@ export default function SFHomelessness() {
           <div className="mt-20 md:mt-32">
             <div className="flex flex-col items-center gap-8">
               <div className="text-center">
-                <h3 className="text-sm md:text-base font-black tracking-wider uppercase mb-4">Who Is Affected</h3>
-                <h4 className="text-2xl md:text-3xl font-medium">Big tech employees & manufacturing labor</h4>
+                <LabelText className="mb-4">Who Is Affected</LabelText>
+                <SubsectionHeading className="font-medium">Big tech employees & manufacturing labor</SubsectionHeading>
               </div>
 
               <div className="w-full max-w-2xl space-y-6">
                 <div className="bg-gradient-to-br from-gray-100 to-gray-200 p-8 md:p-12 rounded-lg">
-                  <p className="text-base md:text-lg italic">
+                  <BodyLarge className="italic">
                     "Just last year, I was a tech employee in San Francisco, making $120,000 annually..."
-                  </p>
+                  </BodyLarge>
                 </div>
 
                 <div className="text-center space-y-2">
-                  <p className="text-lg md:text-xl font-semibold">Target User group</p>
-                  <p className="text-base md:text-lg font-medium">People who lost their job within the last 30 days</p>
+                  <CardHeading>Target User group</CardHeading>
+                  <BodyLarge className="font-medium">People who lost their job within the last 30 days</BodyLarge>
                 </div>
 
                 <div className="bg-gradient-to-br from-gray-800 to-gray-600 text-white p-8 rounded-lg">
@@ -128,28 +129,29 @@ export default function SFHomelessness() {
       </section>
 
       {/* HMW Statement */}
-      <section className="py-20 md:py-32 px-6 md:px-12 lg:px-28 bg-[#C9D0DB] mx-6 md:mx-12 lg:mx-28 rounded-3xl my-20">
+      <section className="py-20 md:py-32 px-8 md:px-16 lg:px-40 bg-[#C9D0DB] mx-8 md:mx-16 lg:mx-40 rounded-3xl my-20">
         <div className="max-w-5xl mx-auto text-center">
-          <motion.h2
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-2xl md:text-4xl font-semibold leading-tight"
           >
-            How might we help newly unemployed SF residents access temporary housing support 
-            within the first 30 days, before they fall into long-term homelessness?
-          </motion.h2>
+            <SectionHeading className="font-semibold">
+              How might we help newly unemployed SF residents access temporary housing support 
+              within the first 30 days, before they fall into long-term homelessness?
+            </SectionHeading>
+          </motion.div>
         </div>
       </section>
 
       {/* Research & Methods */}
-      <section className="py-20 md:py-32 px-6 md:px-12 lg:px-28">
+      <section className="py-20 md:py-32 px-8 md:px-16 lg:px-40">
         <div className="max-w-6xl mx-auto">
           <SectionTitle title="Research & Methods" />
-          <p className="text-base md:text-lg mt-4 text-center">
+          <BodyLarge className="mt-4 text-center">
             Across different teams and contexts, the same breakdowns kept appearing.
-          </p>
+          </BodyLarge>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 mt-12 md:mt-16">
             <ResearchMethod
@@ -172,10 +174,10 @@ export default function SFHomelessness() {
           {/* Key Insights */}
           <div className="mt-20 md:mt-32">
             <div className="text-center mb-12">
-              <h3 className="text-sm md:text-base font-black tracking-wider uppercase mb-4">Key insights</h3>
-              <p className="text-base md:text-lg">
+              <LabelText className="mb-4">Key insights</LabelText>
+              <BodyLarge>
                 The system reacts too late. Housing support should intervene during instability, not after collapse.
-              </p>
+              </BodyLarge>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
@@ -189,18 +191,18 @@ export default function SFHomelessness() {
       </section>
 
       {/* Solutions */}
-      <section className="py-20 md:py-32 px-6 md:px-12 lg:px-28">
+      <section className="py-20 md:py-32 px-8 md:px-16 lg:px-40">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Solutions</h2>
-            <p className="text-base md:text-lg">Designing leverage points to change system behavior</p>
+            <HeroHeading className="font-bold mb-4">Solutions</HeroHeading>
+            <BodyLarge>Designing leverage points to change system behavior</BodyLarge>
           </div>
 
           {/* Timeline */}
           <div className="mb-16 space-y-6">
-            <h3 className="text-sm md:text-base font-black tracking-wider uppercase">Timeline</h3>
-            <p className="text-xl md:text-2xl font-semibold">Job Loss → Housing Loss → Homelessness</p>
-            <p className="text-xl md:text-2xl font-semibold text-center">[ 30-Day Housing Bridge ]</p>
+            <LabelText>Timeline</LabelText>
+            <SubsectionHeading>Job Loss → Housing Loss → Homelessness</SubsectionHeading>
+            <SubsectionHeading className="text-center">[ 30-Day Housing Bridge ]</SubsectionHeading>
           </div>
 
           {/* Solution Cards */}
@@ -231,20 +233,20 @@ export default function SFHomelessness() {
       </section>
 
       {/* Reflection */}
-      <section className="py-20 md:py-32 px-6 md:px-12 lg:px-28">
+      <section className="py-20 md:py-32 px-8 md:px-16 lg:px-40">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-4xl font-semibold mb-12 md:mb-16">Reflection</h2>
+          <SectionHeading className="font-semibold mb-12 md:mb-16">Reflection</SectionHeading>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
             <div className="space-y-4">
-              <h3 className="text-base font-black tracking-wider uppercase">leverage to change the system, not solving the problem</h3>
+              <LabelText>leverage to change the system, not solving the problem</LabelText>
               <p className="text-base leading-relaxed">
                 This project taught me that effective system design is not about solving the entire problem, but about finding the right leverage to change how the system behaves. Rather than attempting to "fix homelessness," I focused on a specific intervention point, the first 30 days after job loss, where a small shift in timing and access could significantly alter long term outcomes.
               </p>
             </div>
             
             <div className="space-y-4">
-              <h3 className="text-base font-black tracking-wider uppercase">Designing dignity into systems</h3>
+              <LabelText>Designing dignity into systems</LabelText>
               <p className="text-base leading-relaxed">
                 Through interviews, I learned that many people avoid shelters not because they reject help, but because current systems often require them to give up autonomy, belongings, or clarity about their future. This insight pushed me to treat dignity as a functional requirement, not an abstract value.
               </p>
@@ -258,22 +260,21 @@ export default function SFHomelessness() {
 
 function SectionTitle({ title }: { title: string }) {
   return (
-    <motion.h2
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="text-3xl md:text-4xl font-bold"
     >
-      {title}
-    </motion.h2>
+      <SectionHeading>{title}</SectionHeading>
+    </motion.div>
   );
 }
 
 function MetaBlock({ title, content }: { title: string; content: string }) {
   return (
     <div className="flex flex-col gap-3">
-      <h3 className="text-sm md:text-base font-black tracking-wider uppercase">{title}</h3>
+      <LabelText>{title}</LabelText>
       <p className="text-sm md:text-base whitespace-pre-line">{content}</p>
     </div>
   );
@@ -290,7 +291,7 @@ function ResearchMethod({ title, color, description }: { title: string; color: s
     >
       <div className={`w-full h-8 ${color} rounded-t-lg`} />
       <div className="px-4 space-y-3">
-        <h3 className="text-lg md:text-xl font-semibold text-center">{title}</h3>
+        <CardHeading className="text-center">{title}</CardHeading>
         <p className="text-sm md:text-base">{description}</p>
       </div>
     </motion.div>
@@ -309,7 +310,7 @@ function InsightCard({ number, title }: { number: string; title: string }) {
       <div className="w-20 h-20 md:w-24 md:h-24 bg-[#52658C] rounded-full flex items-center justify-center flex-shrink-0">
         <span className="text-3xl md:text-4xl font-bold text-white">{number}.</span>
       </div>
-      <p className="text-lg md:text-xl font-semibold">{title}</p>
+      <CardHeading>{title}</CardHeading>
     </motion.div>
   );
 }
@@ -341,7 +342,7 @@ function SolutionCard({ image, title, impact, why, reverse }: SolutionCardProps)
         />
       </div>
       <div className="flex-1 space-y-8">
-        <h3 className="text-xl md:text-2xl font-semibold text-center">{title}</h3>
+        <SubsectionHeading className="text-center">{title}</SubsectionHeading>
         <div className="space-y-4">
           <div className="text-center">
             <h4 className="text-sm font-black tracking-wider uppercase mb-2">Impact</h4>
